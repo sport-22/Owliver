@@ -11,7 +11,7 @@ The OwlMind Framework is being developed by The Generative Intelligence Lab at F
 The framework is designed for both education and experimentation empowering students and researchers to rapidly build Hybrid AI-based Agentic Systems, achieving tangible results with minimal setup.
 
 
-### Core Components
+## Core Components
 
 
 <img src="docs/images/owlmind-arch.png" width=800>
@@ -24,7 +24,7 @@ The framework is designed for both education and experimentation empowering stud
 * **Model Orchestrator:** Manages and integrates multiple GenAI models within pipelines, offering flexibility and simplicity for developers.
 
 
-### Hybrid Intelligence Framework
+## Hybrid Intelligence Framework
 
 The OwlMind architecture follows the principles of ``Hybrid Intelligence``, combining local rule-based inference with remote GenAI-assisted inference. This hybrid approach allows for multiple inference configurations:
 
@@ -34,7 +34,7 @@ The OwlMind architecture follows the principles of ``Hybrid Intelligence``, comb
 * **Proactive rule generation for new contexts:** the system anticipates novel situations and queries GenAI for relevant rules before issues arise, ensuring continuous learning and adaptability.
 
 
-### Agentic Core: Belief-Desire-Intention (BDI) Model
+## Agentic Core: Belief-Desire-Intention (BDI) Model
 
 
 The ``Agentic Core`` adheres to the ``Belief-Desire-Intention (BDI) framework``, a cognitive architecture that enables goal-oriented agent behavior. The decision-making process is structured as follows:
