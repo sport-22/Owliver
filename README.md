@@ -6,7 +6,7 @@
 
 # OwlMind 
 
-OwlMind Framework is being created by The Generative Intelligence Lab at Florida Atlantic University with the purpose to support Education and Experimentation with Hybrid Intelligence System. These are solutions that apply a combination of Rule- adn GenAI-based inference to facilitate local solutions, improve latency, optimize costs, and reduce energy utilization and carbon emissions. The focus is on education, empowering students to rapidly achieve tangible outcomes by implementing consumable HybridAI-based Agentic Systems. 
+OwlMind Framework is being created by The Generative Intelligence Lab at Florida Atlantic University with the purpose to support Education and Experimentation with Hybrid Intelligence System. These are solutions that apply a combination of Rule- and GenAI-based inference to facilitate the implementation of local-AI solutions, improve latency, optimize costs, and reduce energy utilization and carbon emissions. This framework is designed to support education an experimentation, empowering students to rapidly achieve tangible outcomes by implementing consumable HybridAI-based Agentic Systems. 
 
 
 <img src="docs/images/owlmind-arch.png" width=800>
