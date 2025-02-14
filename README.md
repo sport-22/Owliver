@@ -41,4 +41,7 @@ The ``Agentic Core`` adheres to the [Belief-Desire-Intention (BDI) framework](ht
 ## Getting Started
 
 * [Configure a simple Rule-Based Discord Bot](./docs/bot-1.md)
+* Configure GenAI Pipelines with bot-1.py to extend conversation capabilities
+* Configure Prompt Engineering Workflows to improve reasoning.
+* Configure Artifacts in the GenAI Pipelines to extend reasoning capabilities
 
