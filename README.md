@@ -6,42 +6,50 @@
 
 # OwlMind 
 
-OwlMind Framework is being created by The Generative Intelligence Lab at Florida Atlantic University with the purpose to support Education and Experimentation with Hybrid Intelligence System. These are solutions that apply a combination of Rule- and GenAI-based inference to facilitate the implementation of local-AI solutions, improve latency, optimize costs, and reduce energy utilization and carbon emissions. This framework is designed to support education an experimentation, empowering students to rapidly achieve tangible outcomes by implementing consumable HybridAI-based Agentic Systems. 
+The OwlMind Framework is being developed by The Generative Intelligence Lab at Florida Atlantic University to support education and experimentation with Hybrid Intelligence Systems. These solutions combine rule-based and generative AI (GenAI)-based inference to facilitate the implementation of local AI solutions, improving latency, optimizing costs, and reducing energy consumption and carbon emissions.
+
+The framework is designed for both education and experimentation empowering students and researchers to rapidly build Hybrid AI-based Agentic Systems, achieving tangible results with minimal setup.
+
+
+### Core Components
 
 
 <img src="docs/images/owlmind-arch.png" width=800>
 
-The core components include:
-
-* **Bot Runner for Discord Bots**: acts as the interface to host and execute bots on platforms like Discord, providing users with a conversational agent to interact with.
-* **Agentic Core**: provides deliberation at the heart of the platform, enabling users to define and configure rule-based systems.
-* **Configurable GenAI Pipelines**: supports flexible and dynamic pipelines to integrate large-scale Generative AI models into workflows.
-* **Workflow Templates**: offers pre-configured or customizable templates that simplify the Prompt Augmentation Process.
-* **Artifacts**: represents modular components that connect agents to external functionalities, such as web-connection, databases, RAG systems,interacting with APIs,  and others
-* **Model Orchestrator**: connects diverse Generative AI models into its pipelines, providing developers with flexibility and simplicity.
+* **Bot Runner for Discord Bots:** Hosts and executes bots on platforms like Discord, providing users with an interactive conversational agent.
+* **Agentic Core:** Enables deliberation and decision-making by allowing users to define and configure rule-based systems.
+* **Configurable GenAI Pipelines:** Supports flexible and dynamic pipelines to integrate large-scale GenAI models into workflows.
+* **Workflow Templates:** Provides pre-configured or customizable templates to streamline the Prompt Augmentation Process.
+* **Artifacts:** Modular components that connect agents to external functionalities such as web APIs, databases, Retrieval-Augmented Generation (RAG) systems, and more.
+* **Model Orchestrator:** Manages and integrates multiple GenAI models within pipelines, offering flexibility and simplicity for developers.
 
 
-The architecture adheres to the principle of ``Hybrid Intelligence Framework``, combining (local) Rule-based inference with (remote) GenAI Model-assisted inference and support. In this composition, the interplay between Rule- and Model-based inference can take place in different configurations:
+### Hybrid Intelligence Framework
 
-* **GenAI generates the Rules:** The system leverages GenAI to create or refine rule-based logic, ensuring adaptability and efficiency in handling various scenarios.
-* **Rules applied to solve interactions and when not feasible, pass through GenAI:** if the predefined rule set is insufficient, the system escalates the decision-making process to the GenAI model for further reasoning or resolution.
-* **Rules applied to solve interactions and when not feasible, request GenAI for new rules:** instead of merely relying on GenAI for direct inference, the system can request the model to generate additional rules to expand or enhance its local knowledge base.
-* **Proactive request for new rules for new contexts being identified:** the architecture anticipates novel situations and dynamically queries GenAI to generate relevant rules before encountering an issue, ensuring continuous learning and adaptability.
+The OwlMind architecture follows the principles of ``Hybrid Intelligence``, combining local rule-based inference with remote GenAI-assisted inference. This hybrid approach allows for multiple inference configurations:
+
+* **GenAI generates the rules:**  The system leverages GenAI to create or refine rule-based logic, ensuring adaptability and efficiency.
+* **Rules solve interactions; GenAI intervenes when needed:** if predefined rules are insufficient, the system escalates decision-making to the GenAI model.
+* **Rules solve interactions and request GenAI to generate new rules:** instead of directly relying on GenAI for inference, the system asks it to expand its rule set dynamically.
+* **Proactive rule generation for new contexts:** the system anticipates novel situations and queries GenAI for relevant rules before issues arise, ensuring continuous learning and adaptability.
 
 
-The ``Agentic Core`` adheres to the [Belief-Desire-Intention (BDI) framework](https://en.wikipedia.org/wiki/Belief–desire–intention_software_model) for agent-based systems. This cognitive architecture ensures that agents are capable of goal-oriented behavior by structuring their decision-making process around:
-* **Beliefs**: represent the agent’s knowledge or perception of the environment. These beliefs act as the foundational understanding upon which the agent evaluates its actions.
-* **Desires**: define the agent's objectives or goals it wishes to achieve, such as completing a workflow, retrieving specific data, or responding to user queries.
-* **Intentions**: represent the plans or strategies the agent actively commits to in order to achieve its desires, balancing feasibility and optimality.
-* **Plan Base**: A repository of predefined and dynamically generated plans; these plans serve as executable roadmaps for the agent to transform its intentions into actionable steps; the planBase ensures that agents can adapt to varying contexts and efficiently execute workflows based on their beliefs, desires, and current environment.
-* **Capability Base**: defines agent’s operational capabilities, defining what the agent can do in terms of actions and interactions; connected to existing **Artifacts**.
+### Agentic Core: Belief-Desire-Intention (BDI) Model
 
+
+The ``Agentic Core`` adheres to the ``Belief-Desire-Intention (BDI) framework``, a cognitive architecture that enables goal-oriented agent behavior. The decision-making process is structured as follows:
+
+* **Beliefs:** The agent's knowledge or perception of its environment, forming the foundation for evaluation and decision-making.
+* **Desires:** The agent’s objectives or goals, such as completing workflows, retrieving data, or responding to user queries.
+* **Intentions:** The specific plans or strategies the agent commits to in order to achieve its desires, ensuring feasibility and optimization.
+* **Plan Base:** A repository of predefined and dynamically generated plans, serving as actionable roadmaps to execute the agent's goals efficiently.
+* **Capability Base:** Defines the agent's operational capabilities, specifying available actions and interactions; linked to existing Artifacts.
 
 
 ## Getting Started
 
-* [Configure a simple Rule-Based Discord Bot](./docs/bot-1.md)
-* Configure GenAI Pipelines with bot-1.py to extend conversation capabilities
-* Configure Prompt Engineering Workflows to improve reasoning.
-* Configure Artifacts in the GenAI Pipelines to extend reasoning capabilities
+* [Set up a simple Rule-Based Discord Bot](./docs/bot-1.md)
+* Configure GenAI Pipelines to extend the Bot's conversation capabilities
+* Configure Prompt Engineering Workflows to improve the Bot's reasoning.
+* Configure Artifacts in the GenAI Pipelines to extend the Bot's reasoning capabilities
 
