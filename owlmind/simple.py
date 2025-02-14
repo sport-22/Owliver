@@ -1,6 +1,6 @@
 ##
 ## OwlMind - Platform for Education and Experimentation with Generative Intelligent Systems
-## simplebrain.py :: Rule-Based Bot engine with simple deliberation process.
+## simple.py :: provides simple implementations to many of the functionality asn utilities to get the framework running.
 ##
 #  
 # Copyright (c) 2024 Dr. Fernando Koch, The Generative Intelligence Lab @ FAU
@@ -24,11 +24,11 @@
 
 import csv
 from .agent import Plan
-from .botengine import BotBrain, BotMessage
+from .bot import BotEngine, BotMessage
 
-class SimpleBrain(BotBrain):
+class SimpleEngine(BotEngine):
     """
-    SimpleBrain provide s avery simple Rule-based message processing from a list of predefined plans (Rules).
+    SimpleEngine provides a very simple Rule-based message processing from a list of predefined plans (Rules).
 
     Methods:
         load(file_name):
@@ -80,10 +80,10 @@ class SimpleBrain(BotBrain):
                     self += Plan(condition=condition, action=response)
                     row_count += 1
         except FileNotFoundError:
-            if self.debug: print(f'SimpleBrain.load(.): ERROR, file {file_name} not found.')
+            if self.debug: print(f'SimpleEngine.load(.): ERROR, file {file_name} not found.')
 
         ## Update announcement
-        self.announcement = f'SimpleBrain {self.id} loaded {row_count} Rules from {file_name}.'
+        self.announcement = f'SimpleEngine {self.id} loaded {row_count} Rules from {file_name}.'
         return 
 
     def process(self, context:BotMessage):
@@ -92,13 +92,13 @@ class SimpleBrain(BotBrain):
         When the message (Context) matches any plan (Rules), collect the top-matching result.
         """
         if context['message'].startswith('/instructions'):
-            context.response = f'Version: {SimpleBrain.VERSION}\n'
+            context.response = f'Version: {BotMessage.VERSION}\n'
             context.response += f'I have {len(self.plans)} plans.\n\n'
             plan_str : str = str(self.plans)
             context.response += plan_str[0:1500]
 
         elif context in self.plans:
-            if self.debug: print(f'SimpleBrain: response={context.best_result}, alternatives={len(context.all_results)}, score={context.match_score}')
+            if self.debug: print(f'SimpleEngine: response={context.best_result}, alternatives={len(context.all_results)}, score={context.match_score}')
             if self.is_action(context.best_result):
                 context.response = f'it should be an action here: {context.best_result[0], context.best_result[1]}'
             else: 

@@ -26,23 +26,23 @@
 # 
 
 from dotenv import dotenv_values
+from owlmind.simple import SimpleEngine
 from owlmind.discord import DiscordBot
-from owlmind.simplebrain import SimpleBrain
 
 
 if __name__ == '__main__':
 
     # load token from .env
     config = dotenv_values(".env")
-    TOKEN = config['TOKEN']
+    TOKEN = config['DISCORD_TOKEN']
     ## Alternative: Hard-code your TOKEN here and remote the comment:
-    # TOKEN={My Token} 
+    # TOKEN="Enter_Your_Token_Here" 
 
     # Load Simples Bot Brain loading rules from a CSV
-    brain = SimpleBrain(id='bot-1')
-    brain.load('rules/bot-rules-2.csv')
+    engine = SimpleEngine(id='bot-1')
+    engine.load('rules/bot-rules-2.csv')
 
     # Kick start the Bot Runner process
-    bot = DiscordBot(token=TOKEN, brain=brain, debug=True)
+    bot = DiscordBot(token=TOKEN, engine=engine, debug=True)
     bot.run()
 

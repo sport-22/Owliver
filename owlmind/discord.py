@@ -3,7 +3,7 @@
 ## discord.py :: Bot Runner for Discord
 ##
 #  
-# Copyright (c) 2024 Dr. Fernando Koch, The Generative Intelligence Lab @ FAU
+# Copyright (c) 2024, The Generative Intelligence Lab @ FAU
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -16,7 +16,7 @@
 # copies or substantial portions of the Software.
 # 
 # Documentation and Getting Started:
-#    https://github.com/GenILab-FAU/owlmind
+#    https://github.com/genilab-fau/owlmind
 #
 # Disclaimer: 
 # Generative AI has been used extensively while developing this package.
@@ -24,7 +24,7 @@
 
 import re
 import discord
-from .botengine import BotMessage, BotBrain
+from .bot import BotMessage, BotEngine
 
 class DiscordBot(discord.Client):
     """
@@ -35,22 +35,17 @@ class DiscordBot(discord.Client):
     @EXAMPLE
     How to use this class:
 
-    brain = MyBotMind(.) # Check documentation in botmind.py
+    engine = MyBotEngine(.) 
     TOKEN = {My Token}
-    bot = DiscordBot(token=TOKEN, brain=MyBotMind, debug=True)
+    bot = DiscordBot(token=TOKEN, engine=MyBotMind, debug=True)
     bot.run()
-
-    @REQUIRED
-    Help needed:
-    @TODO Need to collect attachments, reactions, etc. (currently only loading text)
-    @TODO Need to return attachments, issue reactions, etc.
     """
-    def __init__(self, token, brain:BotBrain, promiscous:bool=False, debug:bool=False):
+    def __init__(self, token, engine:BotEngine, promiscuous:bool=False, debug:bool=False):
         self.token = token
-        self.promiscous = promiscous
+        self.promiscuous = promiscuous
         self.debug = debug
-        self.brain = brain
-        if self.brain: self.brain.debug = debug
+        self.engine = engine
+        if self.engine: self.engine.debug = debug
 
         ## Discord attributes
         intents = discord.Intents.default()
@@ -66,16 +61,16 @@ class DiscordBot(discord.Client):
     async def on_ready(self):
         print(f'Bot is running as: {self.user.name}.')
         if self.debug: print(f'Debug is on!')
-        if self.brain: 
-            print(f'Bot is connected to {self.brain.__class__.__name__}({self.brain.id}).') 
-            if self.brain.announcement: print(self.brain.announcement)
-            self.brain.debug = self.debug
+        if self.engine: 
+            print(f'Bot is connected to {self.engine.__class__.__name__}({self.engine.id}).') 
+            if self.engine.announcement: print(self.engine.announcement)
+            self.engine.debug = self.debug
         
     async def on_message(self, message):
         # CUT-SHORT conditions
-        # Only process if message does not come from itself, the bot is configured as promiscous, or this is a DM or mentions the bot
+        # Only process if message does not come from itself, the bot is configured as promiscuous, or this is a DM or mentions the bot
         if message.author == self.user or \
-            (not self.promiscous and not (self.user in message.mentions or isinstance(message.channel, discord.DMChannel))):
+            (not self.promiscuous and not (self.user in message.mentions or isinstance(message.channel, discord.DMChannel))):
            if self.debug: print(f'IGNORING: orig={message.author.name}, dest={self.user}') 
            return
 
@@ -103,12 +98,12 @@ class DiscordBot(discord.Client):
 
         if self.debug: print(f'PROCESSING: ctx={context}')
                                
-        # Process through Brain
-        if self.brain:
-            self.brain.process(context)
+        # Process through engine
+        if self.engine:
+            self.engine.process(context)
 
         # If the immediate processing of Context generated a result (sync mode), return it through the bot interface
-        # @TODO return attachements, issue reactions, etc
+        # @TODO return attachments, issue reactions, etc
         if context.response:
             await message.channel.send(context.response)
         return

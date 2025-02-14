@@ -6,6 +6,7 @@
 
 excerpts
 excerpts*
+.env
 
 #
 # Byte-compiled / optimized / DLL files

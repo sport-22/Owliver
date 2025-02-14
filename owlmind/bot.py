@@ -29,11 +29,11 @@ from .agent import Agent, Plan
 from .context import Context
 
 ##
-## BASE CLASS FOR BOTMESSAGE
+## BASE CLASS FOR BOT MESSAGE
 ## This is the class received through BotBrain.process()
 
 class BotMessage(Context):
-    BASE_STANDARD = '.;'
+    #BASE_STANDARD = '.;'
     """
     Message format being passed to/from BotBrain logic
     """
@@ -63,10 +63,10 @@ class BotMessage(Context):
 
 
 ##
-## BASE CLASS FOR BOTBRAIN
+## BASE CLASS FOR BOT ENGINE
 ##
 
-class BotBrain(Agent):
+class BotEngine(Agent):
     """
     BotBrain logic
     """  
