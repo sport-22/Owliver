@@ -2,7 +2,7 @@
 
 <img src="docs/images/owlmind-banner.png" width=800>
 
-### [Understand](./README.md) | [Install](./INSTALLING.md) | [Get Started](./README.md#getting-started) | [Contribute](./CONTRIBUTING.md)
+### [Understand](./README.md) | [Get Started](./README.md#getting-started) | [Contribute](./CONTRIBUTING.md)
 
 # OwlMind 
 
@@ -48,6 +48,7 @@ The ``Agentic Core`` adheres to the ``Belief-Desire-Intention (BDI) framework``,
 
 ## Getting Started
 
+* [Install the Owlmind Framework on your Computer](./INSTALLING.md)
 * [Set up a simple HybridAI-Based Discord Bot](./INSTALLING.md)
 * [Configure GenAI Pipelines](./CONFIG.md) to extend the Bot's conversation capabilities
 * Configure Prompt Engineering Workflows to improve the Bot's reasoning.

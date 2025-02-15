@@ -1,7 +1,7 @@
 
 <img src="docs/images/owlmind-banner.png" width=800>
 
-### [Understand](./README.md) | [Install](./INSTALLING.md) | [Get Started](./README.md#getting-started) | [Contribute](./CONTRIBUTING.md)
+### [Understand](./README.md) | [Get Started](./README.md#getting-started) | [Contribute](./CONTRIBUTING.md)
 
 
 # Contributing to OwlMind
