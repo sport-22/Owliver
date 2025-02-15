@@ -12,8 +12,9 @@ During this process you will:
 1. Install OwlMind locally
 2. Configure your Discord Bot  
 3. Connect your Discord Bot with a simple OwlMind BotEngine 
-4. (optional) Customize the simple OwlMind BotEngine
+4. (optional) Connect to a GenAI-Model Provider
 
+Troubleshooting information at [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
 
 ### 1. Install OwlMind locally
 
@@ -84,6 +85,8 @@ if __name__ == '__main__':
 ```
 
 
+
+
 #### Execute the 'getting started' BotMind:
 
 ```bash
@@ -100,32 +103,11 @@ At this point your Bot should be animated and you can chat with it on Discord:
 
 
 
+## 4. (optional) Connect to a GenAI-Model Provider
 
-## Common Issues
+To connect to a GenAI Model provider:
+* [General Audience](./CONFIG.md)
+* [FAU Students](./CONFIG-FAU.md)
 
-
-### Issues with Python3 version compatibility
-
-We tested with Python 3.11, 3.12, and above. 
-
-Check your python version with:
-
-```bash
-$ python3 --version
-Python 3.13.1
-```
-
-### Missing module **audioop**
-
-This seems to be related to python3.13>. 
-
-Importing this module has been included in requirements.txt. 
-
-If it did not import correctly, you can make it run manually as:
-
-
-```bash
-python3 -m pip install --break-system-packages install audioop-lts
-```
 
 

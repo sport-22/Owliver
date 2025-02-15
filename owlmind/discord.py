@@ -1,5 +1,5 @@
 ##
-## OwlMind - Platform for Education and Experimentation with Generative Intelligent Systems
+## OwlMind - Platform for Education and Experimentation with Hybrid Intelligent Systems
 ## discord.py :: Bot Runner for Discord
 ##
 #  
@@ -24,6 +24,7 @@
 
 import re
 import discord
+import datetime
 from .bot import BotMessage, BotEngine
 
 class DiscordBot(discord.Client):
@@ -92,6 +93,11 @@ class DiscordBot(discord.Client):
                 thread_name     = message.channel.name if isinstance(message.channel, discord.Thread) else '',
                 author_name     = message.author.name,
                 author_fullname = message.author.global_name,
+                author          = message.author.global_name,
+                bot             = self.user,
+                timestamp=datetime.datetime.now(),
+                date=datetime.datetime.now().strftime("%d-%b-%Y"),  # Format date as '25-Feb-2024'
+                time=datetime.datetime.now().strftime("%H:%M:%S"),  # Format time as '20:58:14'
                 message         = text,
                 attachments     = attachments,
                 reactions       = reactions)

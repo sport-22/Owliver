@@ -1,9 +1,9 @@
 ##
-## OwlMind - Platform for Education and Experimentation with Generative Intelligent Systems
+## OwlMind - Platform for Education and Experimentation with Hybrid Intelligent Systems
 ## simple.py :: provides simple implementations to many of the functionality asn utilities to get the framework running.
 ##
 #  
-# Copyright (c) 2024 Dr. Fernando Koch, The Generative Intelligence Lab @ FAU
+# Copyright (c) 2024, The Generative Intelligence Lab @ FAU
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -16,7 +16,7 @@
 # copies or substantial portions of the Software.
 # 
 # Documentation and Getting Started:
-#    https://github.com/GenILab-FAU/owlmind
+#    https://github.com/genilab-fau/owlmind
 #
 # Disclaimer: 
 # Generative AI has been used extensively while developing this package.
@@ -42,7 +42,8 @@ class SimpleEngine(BotEngine):
 
     def __init__(self, id):
         super().__init__(id)
-        self += Plan(condition={'message':'_'}, action='I have no idea how to respond!')
+        self.rule_file = None
+        self.model_provider = None
         return 
 
     def load(self, file_name):
@@ -73,6 +74,7 @@ class SimpleEngine(BotEngine):
         row_count = 0
         try:
             with open(file_name, mode='r', encoding='utf-8') as file:
+                self.rule_file = file_name
                 reader = csv.DictReader((row for row in file if row.strip() and not row.strip().startswith('#')), escapechar='\\')
                 for row in reader:
                     condition = {key.strip(): value.strip() for key, value in row.items() if key and value and key.strip().lower() != 'response'}
@@ -88,23 +90,53 @@ class SimpleEngine(BotEngine):
 
     def process(self, context:BotMessage):
         """
-        Simplified logic to process incoming messages.
-        When the message (Context) matches any plan (Rules), collect the top-matching result.
+        Simplified deliberation logic.
         """
-        if context['message'].startswith('/instructions'):
-            context.response = f'Version: {BotMessage.VERSION}\n'
-            context.response += f'I have {len(self.plans)} plans.\n\n'
+
+        if context['message'] == '/help':
+            context.response = f'### Version: {BotMessage.VERSION}\n'
+            context.response += f'### Help\n'
+            context.response += f'* ``/info``: displays basic information\n'
+            context.response += f'* ``/reload``: reload rule file'
+        
+        elif context['message'] == '/info':
+            context.response = f'### Version: {BotMessage.VERSION}\n'
+            
+            if self.model_provider:
+                context.response += f'### Model Provider:\n'
+                context.response += f'* type: {self.model_provider.type}\n'
+                context.response += f'* url: {self.model_provider.base_url}\n'
+
+            context.response += f'### PlanRepo: \n'
+            context.response += f'* Number of plans: {len(self.plans)}\n'
             plan_str : str = str(self.plans)
-            context.response += plan_str[0:1500]
+            context.response += "```\n" + plan_str[0:1500] + "\n```"
+
+
+
+        elif context['message'] == '/reload':
+            context.response = f'### Version: {BotMessage.VERSION}\n'
+            self.plans.clear()
+            if self.rule_file:
+                context.response += f'### Loading: {self.rule_file}\n'
+                self.load(file_name=self.rule_file)
+            context.response += f'### Reloaded with {len(self.plans)} plans!'
 
         elif context in self.plans:
-            if self.debug: print(f'SimpleEngine: response={context.best_result}, alternatives={len(context.all_results)}, score={context.match_score}')
-            if self.is_action(context.best_result):
-                context.response = f'it should be an action here: {context.best_result[0], context.best_result[1]}'
+            if self.debug: print(f'SimpleEngine: response={context.result}, alternatives={len(context.alternatives)}, score={context.score}')
+            if self.is_action(context.result):
+                command, prompt = context.result.split('/', maxsplit=1) if '/' in context.result else (context.result, '')
+                print('-->', command, prompt, context['message'])
+                
+                if command == '@prompt' and self.model_provider:
+                    prompt = prompt + '\n' + context['message']
+                    print('E--> requesting:', prompt)
+                    context.response = self.model_provider.request(prompt)
+                    
             else: 
-                context.response = context.best_result
+                context.response = context.compile(context.result)
         else:
-            context.response = "(DEFAULT) There are no Rules matching this request"
+            context.response = "#### DEFAULT: There are no rules setup for this request!"
         return 
 
 

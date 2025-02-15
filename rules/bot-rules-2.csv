@@ -1,15 +1,17 @@
 ##
-## Rules for SimpleBrain
+## Rules for SimpleEngine
 #
-# These rules have been generated using ChatGPT:
+# These rules were generated using ChatGPT:
 # https://chatgpt.com/share/678f0123-7724-8002-b75e-60a51ba6dac9
 #
 message,response
+what is my name, Your name is $author
+what time is now, Now it is $time
 *hello*, Hi there! I have knowledge about requirement analysis and can assist with understanding its processes.
 *hello*, Hello! Requirement analysis ensures that we meet stakeholder expectations effectively.
 *hi*, Hello! Requirement analysis is key to understanding user needs and creating effective solutions.
 *hi*, Hi! Let’s explore the importance of requirement analysis in software engineering.
-*hey*, Hey there! I can guide you through requirement analysis concepts.
+*hey*there*, Hey there! I can guide you through requirement analysis concepts.
 *good morning*, Good morning! Ready to discuss requirement analysis and its significance?
 
 *what is the purpose of*, Understanding the purpose helps in defining clear requirements.

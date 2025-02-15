@@ -1,9 +1,9 @@
 ##
-## OwlMind - Platform for Education and Experimentation with Generative Intelligent Systems
-## botengine.py :: Definitions for bot animator
+## OwlMind - Platform for Education and Experimentation with Hybrid Intelligent Systems
+## bot.py :: Definitions for bot engine
 ## 
 #  
-# Copyright (c) 2024 Dr. Fernando Koch, The Generative Intelligence Lab @ FAU
+# Copyright (c) 2024, The Generative Intelligence Lab @ FAU
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -16,10 +16,8 @@
 # copies or substantial portions of the Software.
 # 
 # Documentation and Getting Started:
-#    https://github.com/GenILab-FAU/owlmind
+#    https://github.com/genilab-fau/owlmind
 #
-# Class Documentation at:
-#    https://github.com/GenILab-FAU/owlmind/docs/bot-1.md
 #
 # Disclaimer: 
 # Generative AI has been used extensively while developing this package.
