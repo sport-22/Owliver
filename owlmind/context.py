@@ -188,7 +188,7 @@ class Context(dict):
             if re.fullmatch(test.replace('*', '.*'), target):
                 score += 0.5 + (0.49 * (non_wildcard_count / len(target)))
         elif test.startswith('r/'): 
-            pattern = test[2:-1] if test.endswith('/') else test[2:0] 
+            pattern = test[2:-1] if test.endswith('/') else test[2:] 
             try:
                 if re.fullmatch(pattern, str(target)): 
                     score += 0.75
