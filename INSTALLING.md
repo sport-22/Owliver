@@ -44,6 +44,16 @@ cd owlmind
 python3 -m pip install --break-system-packages -r requirements.txt
 hash -r  # This resets shell PATH cache, not necessary on Windows
 ```
+#### Optional : Install Dev Requirments
+```bash
+python3 -m pip install --break-system-packages -r requirements-dev.txt
+```
+
+#### Optional : Run Unit Tests
+```bash
+python -m pytest -vm unit --cov=owlmind --cov-report=term-missing
+```
+
 
 
 ### 2. Configure your Discord Bot 
