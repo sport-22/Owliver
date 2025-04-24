@@ -1,56 +1,42 @@
+<img src="docs/images/Owliver_Banner.png" width=400>
+
+## Who is Owliver?
+Owliver is a Discord Study Buddy bot based on the Owlmind framework from the Generative Intelligence Lab @ FAU. Initially envisioned as helping students study for math classes, Owliver can also be customized to help study a variety of topics. You can use everyday language with Owliver - no need for special commands.
+
+## What can Owliver help you with today?
+Within Discord's text-based interface, Owliver can:  
+* Give you practice math problems
+* Give hints, step you through, or provide the solution for how to solve a given math problem
+  * You can change how much help Owliver will provide by including that in your request
+* Describe different math concepts at different levels
+* Provide help with navigating Owliver's capabilities
+
+Coming soon: Screenshots of the Owliver prototype in action
+
+## Owliver's Future
+Future development areas include:  
+* Progress tracking
+  * Example Use Case: Allowing a student to see statistics both within and between study sessions (ex: number of problems practiced, percentage of correct responses, number of attempts, etc.)
+* Adding additional context for LLMs to refer back to earlier conversation threads
+  * Example Use Case: A student requesting the solution to a math problem provided by Owliver
+  * Example Use Case: Preventing Owliver from generating problems that are identical or too similar within a given time frame/conversation
+* Support for file generation and acceptance
+  * Example Use Case: A student can provide a screenshot of a math problem they are working on (whether by hand or digitally) for Owliver to assist with, eliminating the need to format the equation in a manner that Discord's text interface can accept
+  * Example Use Case: Owliver can provide an image of a lengthier problem in a more user-friendly format than the Discord text interface allows, for example with LaTeX formatting
+* Support for requesting help in the future
+  * Example Use Case: A student can ask Owliver to generate a practice test for a subject three days before an upcoming test that will then be provided in Discord on the specified date and time, rather than immediately
+
+## Creating Your Own Owliver
+So you want to create your own Owliver? Awesome! 
+
+You can use the links below to learn how to get started with the Owlmind framework. These instructions come directly from the Owlmind framework's GitHub. The only difference is you will want to clone the Owliver repo instead of the Owlmind repo, since Owliver will give you access to an Owliver-specific rule set.
+
+Below you will also find links to the current version of the Owlmind framework, as well as other projects from the Generative Intelligence Lab @ FAU.
+
+### [Understand](./OWLMIND_SETUP.md) | [Get Started](./OWLMIND_SETUP.md#getting-started) | [Owlmind](https://github.com/genilab/owlmind) | [The Generative Intelligence Lab @ FAU](https://github.com/genilab)
 
 
-<img src="docs/images/owlmind-banner.png" width=800>
+## Owliver's Team
+Owliver has been developed by the Three Owls in a Trench Coat team in Dr. Fernando Koch's Spring 2025 CEN 4010 Principles of Software Engineering class.
 
-### [Understand](./README.md) | [Get Started](./README.md#getting-started) | [Contribute](./CONTRIBUTING.md)
-
-# OwlMind 
-
-The OwlMind Framework is being developed by The Generative Intelligence Lab at Florida Atlantic University to support education and experimentation with Hybrid Intelligence Systems. These solutions combine rule-based and generative AI (GenAI)-based inference to facilitate the implementation of local AI solutions, improving latency, optimizing costs, and reducing energy consumption and carbon emissions.
-
-The framework is designed for both education and experimentation empowering students and researchers to rapidly build Hybrid AI-based Agentic Systems, achieving tangible results with minimal setup.
-
-
-## Core Components
-
-
-<img src="docs/images/owlmind-arch.png" width=800>
-
-* **Bot Runner for Discord Bots:** Hosts and executes bots on platforms like Discord, providing users with an interactive conversational agent.
-* **Agentic Core:** Enables deliberation and decision-making by allowing users to define and configure rule-based systems.
-* **Configurable GenAI Pipelines:** Supports flexible and dynamic pipelines to integrate large-scale GenAI models into workflows.
-* **Workflow Templates:** Provides pre-configured or customizable templates to streamline the Prompt Augmentation Process.
-* **Artifacts:** Modular components that connect agents to external functionalities such as web APIs, databases, Retrieval-Augmented Generation (RAG) systems, and more.
-* **Model Orchestrator:** Manages and integrates multiple GenAI models within pipelines, offering flexibility and simplicity for developers.
-
-
-## Hybrid Intelligence Framework
-
-The OwlMind architecture follows the principles of ``Hybrid Intelligence``, combining local rule-based inference with remote GenAI-assisted inference. This hybrid approach allows for multiple inference configurations:
-
-* **GenAI generates the rules:**  The system leverages GenAI to create or refine rule-based logic, ensuring adaptability and efficiency.
-* **Rules solve interactions; GenAI intervenes when needed:** if predefined rules are insufficient, the system escalates decision-making to the GenAI model.
-* **Rules solve interactions and request GenAI to generate new rules:** instead of directly relying on GenAI for inference, the system asks it to expand its rule set dynamically.
-* **Proactive rule generation for new contexts:** the system anticipates novel situations and queries GenAI for relevant rules before issues arise, ensuring continuous learning and adaptability.
-
-
-## Agentic Core: Belief-Desire-Intention (BDI) Model
-
-
-The ``Agentic Core`` adheres to the ``Belief-Desire-Intention (BDI) framework``, a cognitive architecture that enables goal-oriented agent behavior. The decision-making process is structured as follows:
-
-* **Beliefs:** The agent's knowledge or perception of its environment, forming the foundation for evaluation and decision-making.
-* **Desires:** The agent’s objectives or goals, such as completing workflows, retrieving data, or responding to user queries.
-* **Intentions:** The specific plans or strategies the agent commits to in order to achieve its desires, ensuring feasibility and optimization.
-* **Plan Base:** A repository of predefined and dynamically generated plans, serving as actionable roadmaps to execute the agent's goals efficiently.
-* **Capability Base:** Defines the agent's operational capabilities, specifying available actions and interactions; linked to existing Artifacts.
-
-
-## Getting Started
-
-* [Install the Owlmind Framework on your Computer](./INSTALLING.md)
-* [Set up a simple HybridAI-Based Discord Bot](./INSTALLING.md)
-* [Configure GenAI Pipelines](./CONFIG.md) to extend the Bot's conversation capabilities
-* Configure Prompt Engineering Workflows to improve the Bot's reasoning.
-* Configure Artifacts in the GenAI Pipelines to extend the Bot's reasoning capabilities
-
+[Click here to find out more about the Generative Intelligence Lab @ FAU](https://github.com/genilab)
