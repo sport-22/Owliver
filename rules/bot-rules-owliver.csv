@@ -1,0 +1,262 @@
+##,
+## Rules for SimpleEngine,
+#,
+# Experimental rules for GenAI Pipeline - additional math rules,
+#  generated with the assistance of ChatGPT and modified as,
+#  needed for use with Owliver,
+#,
+message,response
+*hello*, Hi there!
+*your name*, My name is $bot
+*my name*, Your name is $author
+*day*, Today is $date
+*date*, Today is $date
+*time*, Now it is $time
+*what is add*,Addition is the process of calculating the sum of two or more numbers.
+*what is subtract*,Subtraction is the process of finding the difference between two numbers.
+*what is multipl*,Multiplication is the process of calculating the product of two or more numbers.
+*what is divi*,Division is the process of calculating the quotient of two numbers.
+*what is squar*,Squaring a number means multiplying it by itself.
+*what is power*,Raising a number to a power means multiplying it by itself a specified number of times.
+*what is a factorial*,The factorial of a number is the product of all positive integers less than or equal to that number.
+*what is modulo*,Modulo operation returns the remainder when one number is divided by another.
+*what is percent*,Percent is a way of expressing a number as a fraction of 100.
+*what is area*,"Area is the amount of space inside a shape, calculated based on its dimensions."
+*what is perimeter*,Perimeter is the total distance around the outside of a shape.
+*what is volume*,Volume is the amount of space occupied by a 3D object.
+*what is an equation*,"An equation is a statement that two expressions are equal, containing one or more variables."
+*what is solv*,Solving an equation means finding the values of variables that make the equation true.
+*what is factoring*,Factoring means breaking down an expression into simpler parts that multiply together.
+*what is a linear equation*,A linear equation is an equation in which the variables appear only to the first power and are not multiplied together.
+*what is a quadratic equation*,A quadratic equation is a second-degree polynomial equation of the form ax^2 + bx + c = 0.
+*what is a system of equations*,A system of equations is a set of two or more equations that share common variables.
+*what is an absolute*,"Absolute value refers to the distance a number is from zero on the number line, without considering its sign."
+*what is a series*,A series is the sum of the terms of a sequence.
+*what is a sequence*,"A sequence is an ordered list of numbers, where each term is generated based on a specific rule."
+*what is a combination*,"A combination is a selection of items from a larger set, where the order of selection does not matter."
+*what is a permutation*,"A permutation is an arrangement of items from a larger set, where the order of selection matters."
+*what is mean*,"The mean is the average of a set of numbers, calculated by summing them and dividing by the number of values."
+*what is median*,The median is the middle value of a set of numbers when arranged in order.
+*what is mode*,The mode is the value that appears most frequently in a set of numbers.
+*what is an example of add*,Example: 5 + 3 = 8
+*what is an example of subtract*,Example: 10 - 4 = 6
+*what is an example of multipl*,Example: 7 x 6 = 42
+*what is an example of divi*,Example: 20/5 = 4
+*what is an example of squar*,Example: 4^2 = 16
+*what is an example of a power*,2^3 = 2 x 2 x 2 = 8
+*what is an example of a factorial*,Example: 5! = 5 x 4 x 3 x 2 x 1 = 120
+*what is an example of modulo*,Example: 10 mod 3 = 1
+*what is an example of percent*,Example: 20% of 50 = (20/100) x 50 = 10
+*what is an example of finding area*,Example: Area of a rectangle with length 5 and width 3 is 5 x 3 = 15
+*what is an example of finding perimeter*,Example: Perimeter of a square with side 4 is 4 x 4 = 16
+*what is an example of finding volume*,Example: Volume of a cube with side 3 is 3^3 = 27
+*what is an example of an equation*,Example: Solve x + 5 = 10 ? x = 5
+*what is an example of solv*,Example: Solve 2x + 3 = 7 ? x = 2
+*what is an example of factoring*,Example: Factor (x^2) - 5x + 6 ? (x - 2)(x - 3)
+*what is an example of a linear equation*,Example: Solve 2x - 4 = 10 ? x = 7
+*what is an example of a quadratic equation*,Example: Solve (x^2) - 5x + 6 = 0 ? x = 2 or x = 3
+*what is an example of a system of equations*,"Example: Solve x + y = 5 and x - y = 1 ? x = 3, y = 2"
+*what is an example of abs*,Example: |-5| = 5
+*what is an example of a series*,Example: 1 + 2 + 3 + 4 + ... + n
+*what is an example of a seq*,"Example: Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, ..."
+*what is an example of comb*,"Example: Choosing 2 objects from {A, B, C} ? {AB, AC, BC}"
+*what is an example of permu*,"Example: Arranging 2 objects from {A, B, C} ? {AB, BA, AC, CA, BC, CB}"
+*what is an example of mean*,"Example: Mean of {2, 4, 6} is (2+4+6)/3 = 4"
+*what is an example of median*,"Example: Median of {1, 3, 3, 6, 7, 8, 9} is 6"
+*what is an example of mode*,"Example: Mode of {1, 2, 2, 3, 3, 3, 4} is 3"
+*can I have an add*,What is 2+2?
+*can I have an add*,What is 10+7?
+*can I have an add*,What is 15+4?
+*can I have an add*,What is 6+9?
+*can I have an add*,What is 8+12?
+*does 2+2=4*,"Yes, 2+2=4."
+*does 10+7=17*,"Yes, 10+7=17."
+*does 15+4=19*,"Yes, 15+4=19."
+*does 6+9=15*,"Yes, 6+9=15."
+*does 8+12=20*,"Yes, 8+12=20"
+*what is 2+2*,2+2=4
+*what is 10+7*,10+7=17
+*what is 15+4*,15+4=19
+*what is 6+9*,6+9=15
+*what is 8+12*,8+12=20
+*can I have a sub*,What is 9-5?
+*can I have a sub*,What is 20-7?
+*can I have a sub*,What is 50-25?
+*can I have a sub*,What is 100-40?
+*can I have a sub*,What is 33-11?
+*does 9-5=4*,"Yes, 9-5=4."
+*does 20-7=13*,"Yes, 20-7=13."
+*does 50-25=25*,"Yes, 50-25=25."
+*does 100-40=60*,"Yes, 100-40=60."
+*does 33-11=22*,"Yes, 33-11=22"
+*what is 9-5*,9-5=4
+*what is 20-7*,20-7=13
+*what is 50-25*,50-25=25
+*what is 100-40*,100-40=60
+*what is 33-11*,33-11=22
+*can I have a mult*,What is 6 x 7?
+*can I have a mult*,What is 9 x 5?
+*can I have a mult*,What is 12 x 4?
+*can I have a mult*,What is 8 x 3?
+*can I have a mult*,What is 15 x 2?
+*does 6x7=42*,"Yes, 6 x 7 = 42"
+*does 9x5=45*,"Yes, 9 x 5 = 45"
+*does 12x4=48*,"Yes, 12 x 4 = 48"
+*does 8x3=24*,"Yes, 8 x 3 = 24"
+*does 15x2=30*,"Yes, 15 x 2 = 30"
+*what is 6x7*,6 x 7 = 42
+*what is 9x5*,9 x 5 = 45
+*what is 12x4*,12 x 4 = 48
+*what is 8x3*,8 x 3 = 24
+*what is 15x2*,15 x 2 = 30
+*can I have a divi*,What is 20/5?
+*can I have a divi*,What is 36/6?
+*can I have a divi*,What is 81/9?
+*can I have a divi*,What is 100/10?
+*can I have a divi*,What is 144/12?
+*does 20/5=4*,"Yes,  20/5 = 4"
+*does 36/6=6*,"Yes,  36/6 = 6"
+*does 81/9=9*,"Yes, 81/9 = 9"
+*does 100/10=10*,"Yes, 100/10 = 10"
+*does 144/12=12*,"Yes, 144/12 = 12"
+*what is 20/5*, 20/5 = 4
+*what is 36/6*, 36/6 = 6
+*what is 81/9*,81/9 = 9
+*what is 100/10*,100/10 = 10
+*what is 144/12*,144/12 = 12
+*can I have a squar*,What is 3^2?
+*can I have a squar*,What is 5^2?
+*can I have a squar*,What is 7^2?
+*can I have a squar*,What is 9^2?
+*can I have a squar*,What is 12^2?
+*does 3^2=9*,"Yes, 3^2 = 9"
+*does 5^2=25*,"Yes, 5^2 = 25"
+*does 7^2=49*,"Yes, 7^2 = 49"
+*does 9^2=81*,"Yes, 9^2 = 81"
+*does 12^2=144*,"Yes, 12^2 = 144"
+*what is 3^2*,3^2 = 9
+*what is 5^2*,5^2 = 25
+*what is 7^2*,7^2 = 49
+*what is 9^2*,9^2 = 81
+*what is 12^2*,12^2 = 144
+*can I have a power*,What is 2^3?
+*can I have a power*,What is 3^3?
+*can I have a power*,What is 4^3?
+*can I have a power*,What is 5^3?
+*can I have a power*,What is 6^3?
+*does 2^3=8*,"Yes, 2^3 = 8"
+*does 3^3=27*,"Yes, 3^3 = 27"
+*does 4^3=64*,"Yes, 4^3 = 64"
+*does 5^3=125*,"Yes, 5^3 = 125"
+*does 6^3=216*,"Yes, 6^3 = 216"
+*what is 2^3*,2^3 = 8
+*what is 3^3*,3^3 = 27
+*what is 4^3*,4^3 = 64
+*what is 5^3*,5^3 = 125
+*what is 6^3*,6^3 = 216
+*can I have a factorial*,What is 4!?
+*can I have a factorial*,What is 5!?
+*can I have a factorial*,What is 6!?
+*can I have a factorial*,What is 7!?
+*can I have a factorial*,What is 8!?
+*does 4!=24*,"Yes, 4! = 24"
+*does 5!=120*,"Yes, 5! = 120"
+*does 6!=720*,"Yes, 6! = 720"
+*does 7!=5040*,"Yes, 7! = 5040"
+*does 8!=40320*,"Yes, 8! = 40320"
+*what is 4!*,4! = 24
+*what is 5!*,5! = 120
+*what is 6!*,6! = 720
+*what is 7!*,7! = 5040
+*what is 8!*,8! = 40320
+*can I have a modulo*,What is 15 mod 4?
+*can I have a modulo*,What is 22 mod 6?
+*can I have a modulo*,What is 35 mod 5?
+*can I have a modulo*,What is 50 mod 7?
+*can I have a modulo*,What is 99 mod 9?
+*does 15 mod 4=3*,"Yes, 15 mod 4 = 3"
+*does 22 mod 6=4*,"Yes, 22 mod 6 = 4"
+*does 35 mod 5=0*,"Yes, 35 mod 5 = 0"
+*does 50 mod 7=1*,"Yes, 50 mod 7 = 1"
+*does 99 mod 9=0*,"Yes, 99 mod 9 = 0"
+*what is 15 mod 4*,15 mod 4 = 3
+*what is 22 mod 6*,22 mod 6 = 4
+*what is 35 mod 5*,35 mod 5 = 0
+*what is 50 mod 7*,50 mod 7 = 1
+*what is 99 mod 9*,99 mod 9 = 0
+*can I have a percent*,What is 20% of 50?
+*can I have a percent*,What is 30% of 80?
+*can I have a percent*,What is 50% of 200?
+*can I have a percent*,What is 75% of 120?
+*can I have a percent*,What is 10% of 500?
+*does 20% of 50=10*,"Yes, 20% of 50 = 10"
+*does 30% of 80=24*,"Yes, 30% of 80 = 24"
+*does 50% of 200=100*,"Yes, 50% of 200 = 100"
+*does 75% of 120=90*,"Yes, 75% of 120 = 90"
+*does 10% of 500=50*,"Yes, 10% of 500 = 50"
+*what is 20% of 50*,20% of 50 = 10
+*what is 30% of 80*,30% of 80 = 24
+*what is 50% of 200*,50% of 200 = 100
+*what is 75% of 120*,75% of 120 = 90
+*what is 10% of 500*,10% of 500 = 50
+*can I have an area of a rec*,What is the area of a 6x4 rectangle?
+*can I have an area of a rec*,What is the area of a 10x5 rectangle?
+*can I have an area of a rec*,What is the area of a 8x7 rectangle?
+*can I have an area of a rec*,What is the area of a 12x9 rectangle?
+*can I have an area of a rec*,What is the area of a 15x10 rectangle?
+*does the area of a 6x4 rectangle=24*,"Yes, the area of a 6x4 rectangle=24"
+*does the area of a 10x5 rectangle=50*,"Yes, the area of a 10x5 rectangle=50"
+*does the area of a 8x7 rectangle=56*,"Yes, the area of a 8x7 rectangle=56"
+*does the area of a 12x9 rectangle=108*,"Yes, the area of a 12x9 rectangle=108"
+*does the area of a 15x10 rectangle=150*,"Yes, the area of a 15x10 rectangle=150"
+*what is the area of a 6x4 rectangle*,Area = 6 x 4 = 24
+*what is the area of a 10x5 rectangle*,Area = 10 x 5 = 50
+*what is the area of a 8x7 rectangle*,Area = 8 x 7 = 56
+*what is  the area of a 12x9 rectangle*,Area = 12 x 9 = 108
+*what is the area of a 15x10 rectangle*,Area = 15 x 10 = 150
+*can I have a perimeter of squ*,What is the perimeter of a square with sides 4?
+*can I have a perimeter of squ*,What is the perimeter of a square with sides 6?
+*can I have a perimeter of squ*,What is the perimeter of a square with sides 8?
+*can I have a perimeter of squ*,What is the perimeter of a square with sides 10?
+*can I have a perimeter of squ*,What is the perimeter of a square with sides 12?
+*does a square with sides 4 have a perimeter of 16*,"Yes, Perimeter = 4 x 4 = 16"
+*does a square with sides 6 have a perimeter of 24*,"Yes, Perimeter = 6 x 4 = 24"
+*does a square with sides 8 have a perimeter of 32*,"Yes, Perimeter = 8 x 4 = 32"
+*does a square with sides 10 have a perimeter of 40*,"Yes, Perimeter = 10 x 4 = 40"
+*does a square with sides 12 have a perimeter of 48*,"Yes, Perimeter = 12 x 4 = 48"
+*what is the perimeter of a square with sides 4*,Perimeter = 4 x 4 = 16
+*what is the perimeter of a square with sides 6*,Perimeter = 6 x 4 = 24
+*what is the perimeter of a square with sides 8*,Perimeter = 8 x 4 = 32
+*what is the perimeter of a square with sides 10*,Perimeter = 10 x 4 = 40
+*what is the perimeter of a square with sides 12*,Perimeter = 12 x 4 = 48
+*explain how to find 3+6*,"Addition combines two numbers to find their total. In this case, three plus six equals nine."
+*explain how to find 7+8*,"Adding seven and eight results in fifteen, which is the sum of the two numbers."
+*explain how to find 15-5*,Subtraction finds the difference between two numbers. Fifteen minus five equals ten.
+*explain how to find 20-8*,"By subtracting eight from twenty, we get twelve, which represents the remaining value."
+*explain how to find 4x5*,"Multiplication is repeated addition. Four times five means adding four five times, which equals twenty."
+*explain how to find 6x7*,Six multiplied by seven gives forty-two because six is added seven times.
+*explain how to find 30/5*,"Division splits a number into equal parts. Thirty divided by five means distributing thirty into five groups, each containing six."
+*explain how to find 100/10*,"Dividing one hundred by ten means finding how many tens fit into one hundred, which equals ten."
+*explain how to find 5^2*,Squaring a number means multiplying it by itself. Five squared equals twenty-five.
+*explain how to find 9^2*,"Nine squared means multiplying nine by nine, resulting in eighty-one."
+*explain how to find 2^3*,Exponentiation raises a number to a power. Two cubed means multiplying two by itself three times: two times two times two equals eight.
+*explain how to find 4^3*,"Four raised to the third power means four times four times four, which results in sixty-four."
+*explain how to find 4!*,"Factorial multiplies a number by all the positive integers below it. Four factorial is four times three times two times one, equaling twenty-four."
+*explain how to find 6!*,"Six factorial means multiplying six by five, four, three, two, and one, resulting in seven hundred twenty."
+*explain how to find 15 mod 4*,"Modulo finds the remainder after division. Fifteen divided by four equals three remainder three, so fifteen mod four is three."
+*explain how to find 28 mod 5*,"Twenty-eight divided by five gives five remainder three, meaning twenty-eight mod five is three."
+*explain how to find 20% of 50*,Percentage means taking a fraction of a number. Twenty percent of fifty is ten because twenty percent is one-fifth of fifty.
+*explain how to find 75% of 200*,Seventy-five percent of two hundred equals one hundred fifty because seventy-five percent is three-fourths of two hundred.
+*explain how to find the area of a rectangle that is 6x4*,The area of a rectangle is found by multiplying length and width. Six times four equals twenty-four.
+*explain how to find the area of a rectangle that is 10 by 5*,"Multiplying ten by five gives fifty, which is the total space inside the rectangle."
+*explain how to find the perimeter of a square with sides 4*,"The perimeter of a square is found by adding all four sides. Since each side is four, the perimeter is sixteen."
+*explain how to find the perimeter of a square with sides 7*,"A square with side length seven has a perimeter of four times seven, which equals twenty-eight."
+*help*,"I can help you by providing definitions, formulas, practice problems, and calculating the answer to problems. I can also provide examples and explanations for solving problems."
+*hello*,"Hello! I can help you with math related topics. You can ask me a question, or you can ask for help to find out more about what I can do."
+*hi*,"Hi! I can help you with math related topics. You can ask me a question, or you can ask for help to find out more about what I can do."
+*thank*,I hope I helped! Let me know if youy need anything else.
+*good bye*,I hope I helped! Let me know if youy need anything else.
+#,
+#,
+What is *, @prompt/Just provide the result
+*," @prompt/You are a helpful math tutor. Give clear, concise answers using plain text and basic math formatting. Focus on definitions, formulas, practice problems, and solving equations. Be supportive and encourage learning. Process this message"
